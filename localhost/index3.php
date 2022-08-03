@@ -1,6 +1,4 @@
 
-
-
 <?php
 require ('DB.php')
 ?>
@@ -9,7 +7,6 @@ require ('DB.php')
 /*mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);*/
 $prid=($_GET["prid"]);
 $prid = (int)$prid;
-echo ($prid);
     $index3 = mysqli_query($dbconnect,"SELECT p.Name, p.ID_Products, p.Characteristics, p.Description, p.Price, p.Discont_Price, p.Promo_Code_Price, p.Main_Picture, pi.Link
     FROM products p
     JOIN pictures pi on p.Main_Picture = pi.ID_Picture
@@ -17,11 +14,6 @@ echo ($prid);
 $row = mysqli_fetch_assoc($index3);
 $image= $row['Link'];
 ?>
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -59,6 +51,7 @@ $image= $row['Link'];
            echo("<img class='choise1 zoom' src='img/$gg' alt='' />");
              }
             ?>
+
           <img
             class="button_menu"
             src="img/Button_menu_more_closed2.png"
@@ -70,8 +63,8 @@ $image= $row['Link'];
          
           <div class="frame_zaglav">
             <h1 style="margin-bottom: 20px"><?php  echo ($row['Name']);  ?></h1>
-            
             <div style="justify-content: flex-start; display: flex">
+
             <?php
              $categ = mysqli_query($dbconnect,"SELECT p.Name, s.Name, s.ID_Section
              FROM products p
@@ -84,7 +77,7 @@ $image= $row['Link'];
              $id=$tuyu['ID_Section'];
               echo("<a href='http://192.168.1.11/index2.php.?id=$id&col=1' style='margin-right: 20px'> $gg </a>");}
               ?>
-            
+
             </div>
 
           </div>
@@ -125,7 +118,6 @@ $image= $row['Link'];
              </div>
           </div>
         
-            
           <div class="frame_click">
             <button class="buy button">
               КУПИТЬ
