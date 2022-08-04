@@ -67,7 +67,7 @@ limit 1 ");
 $image = mysqli_fetch_assoc($image);
 /*style="background-image: <?php  echo ($image['Link']);  ?>;"*/
     echo ("<div class='block hover'>
-    <a href='http://192.168.1.11/index2.php.?id=$id&col=1' class='block1 hover1' style='background-image: url(../img/");
+    <a href='http://localhost/index2.php.?id=$id&col=1' class='block1 hover1' style='background-image: url(../img/");
     echo($image['Link']);
     echo(")'></a> <p class='text'> "); 
     echo($row['Name']); 

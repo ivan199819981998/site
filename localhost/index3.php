@@ -28,7 +28,7 @@ $image= $row['Link'];
   <header>
 
     <div class="header">
-        <a class="menu" href="http://192.168.1.11">↞На главную↠</a>
+        <a class="menu" href="http://localhost">↞На главную↠</a>
         <a class="back" href="#" onclick="history.back(-1);">↞Назад↠</a>
     <p >Здесь могла быть ваша реклама!</p>
     </div>
@@ -75,7 +75,7 @@ $image= $row['Link'];
         
              $gg=$tuyu['Name'];
              $id=$tuyu['ID_Section'];
-              echo("<a href='http://192.168.1.11/index2.php.?id=$id&col=1' style='margin-right: 20px'> $gg </a>");}
+              echo("<a href='http://localhost/index2.php.?id=$id&col=1' style='margin-right: 20px'> $gg </a>");}
               ?>
 
             </div>

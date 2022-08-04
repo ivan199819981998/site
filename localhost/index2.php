@@ -19,7 +19,7 @@ require ('DB.php')
 <header>
 
     <div class="header">
-        <a class="menu" href="http://192.168.1.11">↞На главную↠</a>
+        <a class="menu" href="http://localhost">↞На главную↠</a>
         <a class="back" href="#" onclick="history.back(-1);">↞Назад↠</a>
     <p >Здесь могла быть ваша реклама!</p>
     </div>
@@ -75,7 +75,7 @@ while ($row = mysqli_fetch_assoc($index2)) {
     $prid = (int)$prid;
     $img=$row['Link'];
          echo ("<div class='block hover'>
-         <a href='http://192.168.1.11/index3.php.?id=.$id.&prid=$prid' class='block1 hover1' style='background-image: url(../img/$img)'></a>
+         <a href='http://localhost/index3.php.?id=.$id.&prid=$prid' class='block1 hover1' style='background-image: url(../img/$img)'></a>
          <p class='text'> "); 
          echo($row['name']); 
          echo("<br>"); 
@@ -93,7 +93,7 @@ while ($row = mysqli_fetch_assoc($index2)) {
  while ($row3 >1){
     $id=($_GET["id"]);
   $id = (int)$id;
-    echo ("<a href='http://192.168.1.11/index2.php.?id=$id&col=$colvo' class='block3'>"); 
+    echo ("<a href='http://localhost/index2.php.?id=$id&col=$colvo' class='block3'>"); 
     echo ($colvo);
     echo ("</a>"); 
     $row3=$row3-1;
